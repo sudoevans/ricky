@@ -1,10 +1,11 @@
 # Ricky Log Manager
 
 A command-line tool for managing weekly progress logs. Track your goals, progress, challenges, mentor feedback, and next steps in an organized way.
-
+![Ricky-ezgif](https://github.com/user-attachments/assets/0452b047-0a7c-4762-a4bf-a017925f2723)
 ## Features
 - Create new weekly logs with structured sections
-- View all weekly logs
+- View all we
+ekly logs
 - Edit specific sections of existing logs
 - Delete logs with automatic backup
 - Restore logs from backup
