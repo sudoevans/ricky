@@ -20,7 +20,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 2. Clone the repository:
 ```bash
 git clone https://github.com/sudoevans/ricky.git
-cd log-manager
+cd ricky
 ```
 
 3. Run the installation script:
