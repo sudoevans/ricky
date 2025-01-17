@@ -1,4 +1,4 @@
-# Log Manager
+# Ricky Log Manager
 
 A command-line tool for managing weekly progress logs. Track your goals, progress, challenges, mentor feedback, and next steps in an organized way.
 
@@ -29,14 +29,14 @@ chmod +x install.sh
 ./install.sh
 ```
 
-The program will be installed system-wide and can be accessed using the `log` command from any directory.
+The program will be installed system-wide and can be accessed using the `ricky` command from any directory.
 
 ## Usage
 
 ### Creating a New Log
 
 ```bash
-log new "Week 1"
+ricky new "Week 1"
 ```
 
 This will prompt you to enter information for each section:
@@ -74,7 +74,7 @@ END
 ### Viewing Logs
 
 ```bash
-log view
+ricky view
 ```
 
 Example output:
@@ -113,7 +113,7 @@ Weekly Log #2:
 ### Editing a Log
 
 ```bash
-log edit
+ricky edit
 ```
 
 1. First, select the weekly log number you want to edit
@@ -132,7 +132,7 @@ log edit
 ### Deleting a Log
 
 ```bash
-log delete
+ricky delete
 ```
 
 This will:
@@ -147,7 +147,7 @@ This will:
 If you accidentally delete a log, you can restore from the last backup:
 
 ```bash
-log restore
+ricky restore
 ```
 
 ## File Locations
@@ -168,11 +168,11 @@ Each log entry contains:
 ## Command Summary
 
 ```bash
-log new "Log Name"    # Create a new weekly log
-log view             # View all logs
-log edit             # Edit an existing log
-log delete           # Delete a log (creates backup)
-log restore          # Restore from last backup
+ricky new "Log Name"    # Create a new weekly log
+ricky view             # View all logs
+ricky edit             # Edit an existing log
+ricky delete           # Delete a log (creates backup)
+ricky restore          # Restore from last backup
 ```
 
 ## Tips
@@ -193,6 +193,52 @@ The program handles various error cases:
 - Missing files
 - Empty logs
 - Invalid section selections
+
+
+### Customizing the Command Name
+
+You can customize the command name to whatever you prefer. For example, to change from `ricky` to `log-manager` or any other name:
+
+If you want to change run command, here is how:
+
+1. Edit the `Cargo.toml` file:
+```toml
+[[bin]]
+name = "your-preferred-name"  # Change this to what you want
+path = "src/main.rs"
+```
+
+2. Edit the `install.sh` script to use your new name:
+```bash
+# Copy the binary with new name
+sudo cp target/release/your-preferred-name /usr/local/bin/
+
+# Set permissions
+sudo chmod +x /usr/local/bin/your-preferred-name
+```
+
+3. Reinstall:
+```bash
+# Remove old binary if it exists
+sudo rm /usr/local/bin/ricky
+
+# Reinstall with new name
+./install.sh
+```
+
+Now you can use your custom command name:
+```bash
+log-manager new "Week 1"
+log-manager view
+log-manager edit
+```
+
+Some suggested names you might consider:
+- `log-manager`
+- `weeklog`
+- `progress-log`
+- `devlog`
+- `worklog`
 
 ## Contributing
 

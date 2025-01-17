@@ -7,5 +7,5 @@ edition = "2021"
 chrono = "0.4.39"
 
 [[bin]]
-name = "log"
+name = "ricky"
 path = "src/main.rs"

@@ -7,10 +7,10 @@ cargo build --release
 sudo mkdir -p /usr/local/bin
 
 # Copy the binary
-sudo cp target/release/log /usr/local/bin/
+sudo cp target/release/ricky /usr/local/bin/
 
 # Set permissions
-sudo chmod +x /usr/local/bin/log
+sudo chmod +x /usr/local/bin/ricky
 
-echo "Ricky has been installed successfully!"
-echo "You can now use the 'log' command from anywhere in your terminal."
+echo "Ricky Log manager has been installed successfully!"
+echo "You can now use the 'ricky' command from anywhere in your terminal."
